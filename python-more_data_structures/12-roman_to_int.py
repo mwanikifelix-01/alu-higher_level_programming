@@ -16,7 +16,7 @@ def roman_to_int(roman_string):
     total = 0
     length = len(roman_sring)
 
-    for i range(length):
+    for i in range(length):
         current value = roman_val.get(roman_string[i], 0)
         next_value = 0
         if i + 1 < length:
