@@ -1,28 +1,20 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if roman_string is None or isinstance(roman_string, str):
+    if not roman_string or not isinstance(roman_string, str):
         return 0
 
-    roman_val = {
-            'I': 1,
-            'V': 5,
-            'X': 10,
-            'L': 50,
-            'C': 100,
-            'D': 500,
-            'M': 5000
+    rmn = {
+        'I': 1, 'V': 5, 'X': 10, 'L': 50,
+        'C': 100, 'D': 500, 'M': 1000
     }
 
     total = 0
-    length = len(roman_sring)
+    length = len(roman_string)
 
     for i in range(length):
-        current value = roman_val.get(roman_string[i], 0)
-        next_value = 0
-        if i + 1 < length:
-            next_value = roman_val.get(roman_string[i + 1], 0):
+        current_val = rmn.get(roman_string[i], 0)
 
-        if current_value < next_value:
+        if i + 1 < length and current_val < rmn.get(roman_string[i + 1], 0):
             total -= current_val
         else:
             total += current_val
