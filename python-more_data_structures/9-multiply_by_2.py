@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/pyhthon3
 def multiply_by_2(a_dictionary):
     new_dic = {}
     for key, value in a_dictionary.items():

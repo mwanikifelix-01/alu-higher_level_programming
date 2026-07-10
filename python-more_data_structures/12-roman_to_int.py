@@ -4,12 +4,12 @@ def roman_to_int(roman_string):
         return 0
 
     roman_val = {
-            'I': 1
-            'V': 5
-            'X': 10
-            'L': 50
-            'C': 100
-            'D': 500
+            'I': 1,
+            'V': 5,
+            'X': 10,
+            'L': 50,
+            'C': 100,
+            'D': 500,
             'M': 5000
     }
 
@@ -18,9 +18,11 @@ def roman_to_int(roman_string):
 
     for i range(length):
         current value = roman_val.get(roman_string[i], 0)
+        next_value = 0
+        if i + 1 < length:
+            next_value = roman_val.get(roman_string[i + 1], 0):
 
-
-        if i + 1 < length and current_value < roman_val.get(roman_string[i + 1], 0):
+        if current_value < next_value:
             total -= current_val
         else:
             total += current_val
