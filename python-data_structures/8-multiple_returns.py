@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    f = len(sentence)
-    q = sentence[0]
-    if not sentence:
+    if len( sentence) == 0:
         return(0, None)
-    return({f}, {q})
+    return(len(sentence), sentence[0])
